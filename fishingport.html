@@ -1,0 +1,164 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- saved from url=(0014)about:internet -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/Reset.css" rel="stylesheet" type="text/css" />
+<link href="css/header.css" rel="stylesheet" type="text/css" />
+<link href="css/banner.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/article.css" rel="stylesheet" type="text/css" />
+<title>景观|云澳镇</title>
+</head>
+<body>
+<header>
+<div class="content_wrapper">
+<a href="default.html"><div class="logo">
+<h1>云澳港湾小镇</h1>
+</div></a>
+<nav>
+<ul>
+  <li class="active"><a href="#">景观</a>
+    <ul>
+      <li><a href="yandunbay.html">烟墩湾</a></li>
+      <li><a href="songwell.html">宋井</a></li>
+      <li><a href="fishingport.html">云澳国家中心渔港</a></li>
+    </ul>
+  </li>
+  <li><a href="activity.html">活动</a>
+    <ul>
+      <li><a href="fishing.html">海钓</a></li>
+      <li><a href="motorboat.html">摩托艇</a></li>
+    </ul>
+  </li>
+  <li><a href="facts.html">概况</a></li>
+  <li><a href="transportation.html">交通</a>
+    <ul>
+      <li><a href="transportation.html#go">前往云澳镇</a></li>
+      <li><a href="transportation.html#bus">公交</a></li>
+      <li><a href="transportation.html#drive">自驾车</a></li>
+      <li><a href="transportation.html#bike">自行车</a></li>
+    </ul>
+  </li>
+  <li><a href="delicious.html">美食</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<div id="banner">
+<div class="loading">Loading
+</div>
+    <ul>
+      <li><img src="images/fishingport1.gif"></li>
+      <li><img src="images/fishingport2.gif"></li>
+      <li><img src="images/fishingport3.gif"></li>
+    </ul>
+</div>
+<div id="content">
+<h2>云澳国家中心渔港</h2>
+<p>南澳县云澳国家中心渔港位于广东省汕头市南澳县云澳镇，总投资5793.24万元。云澳国家中心渔港建设规模为：新建南防波堤705米、西防波堤380米、护岸342米、港池航道疏浚13.26万立方米(港池水域海图水深为3.7米）、渔业码头250米、执法办证中心1000平方米，灯塔2座，以及通讯导航、供电、供水、消防、环保等配套设施。该工程建设单位为南澳县渔港建设管理中心、设计单位为广州建港工程勘察设计院、监理单位为广东工程建设监理有限公司、施工单位为中国水产广州建港工程公司，工程自2011年1月8日开工，计划施工工期为30个月。南澳县云澳国家中心渔港建成后，将形成59万平方米的避风水域，不仅能够满足该县渔船的停泊，而且能为粤东、闽南、台湾等地渔船提供停泊和后勤补给等服务，并将进一步完善南澳县标准渔港布局，完善和提升渔港功能，提高渔区防灾减灾能力，保障渔民生命财产安全。渔港的建设，将有力推进南澳海洋综合开发。
+</p>
+</div>
+<div id="footer">
+<p><a href="http://www.hstc.edu.cn/2013/">韩山师范学院</a>|<a href="contact.html">联系我们</a>|<a href="copyright.html">版权声明</a></p>
+<p>CopyRight©2015&nbsp;CYI&ZWS&nbsp;All&nbsp;Rights&nbsp;Reserved</p>
+</div>
+<script type="text/javascript">
+//主函数
+var s=function(){
+var interv=3000; //切换间隔时间
+var interv2=10; //切换速du
+var opac1=80; //文字背景的透明度
+var source="banner" //焦点轮换图片容器的id名称
+//获取对象
+function getTag(tag,obj){
+	if(obj==null)
+	{return document.getElementsByTagName(tag)}
+	else
+	{return obj.getElementsByTagName(tag)}}
+function getid(id)
+    {return document.getElementById(id)};
+var opac=0,j=0,t=63,num,scton=0,timer,timer2,timer3;
+var id=getid(source);
+id.removeChild(getTag("div",id)[0]);
+var li=getTag("li",id);
+var div=document.createElement("div");
+var title=document.createElement("div");
+var span=document.createElement("span");
+var button=document.createElement("div");
+    button.className="button";
+for(var i=0;i<li.length;i++)
+{var a=document.createElement("a");
+a.innerHTML=i+1;
+a.onclick=function()
+{clearTimeout(timer);
+clearTimeout(timer2);
+clearTimeout(timer3);
+j=parseInt(this.innerHTML)-1;
+scton=0;
+t=63;
+opac=0;
+fadeon();
+};
+a.className="b1";
+a.onmouseover=function()
+{this.className="b2"};
+a.onmouseout=function()
+{this.className="b1";
+sc(j)};
+button.appendChild(a);}
+//控制图层透明度
+function alpha(obj,n)
+{if(document.all)
+{obj.style.filter="alpha(opacity="+n+")";}
+else{obj.style.opacity=(n/100);}}
+//控制焦点按钮
+function sc(n){
+	for(var i=0;i<li.length;i++)
+	{button.childNodes[i].className="b1"};
+	button.childNodes[n].className="b2";}
+title.className="num_list";
+title.appendChild(span);
+alpha(title,opac1);
+id.className="d1";
+div.className="d2";
+id.appendChild(div);
+id.appendChild(title);
+id.appendChild(button);
+//渐显
+var fadeon=function()
+{opac+=5;
+div.innerHTML=li[j].innerHTML;
+span.innerHTML=getTag("img",li[j])[0].alt;
+alpha(div,opac);
+if(scton==0)
+{sc(j);
+num=-2;
+scrolltxt();
+scton=1};
+if(opac<100)
+{timer=setTimeout(fadeon,interv2)}
+else
+{timer2=setTimeout(fadeout,interv);};}
+//渐隐
+var fadeout=function()
+{opac-=5;div.innerHTML=li[j].innerHTML;
+alpha(div,opac);
+if(scton==0)
+{num=2;scrolltxt();scton=1};
+if(opac>0){timer=setTimeout(fadeout,interv2)}
+else
+{if(j<li.length-1){j++}else{j=0};fadeon()};}
+//滚动文字
+var scrolltxt=function(){t+=num;span.style.marginTop=t+"px";
+if(num<0 && t>3)
+{timer3=setTimeout(scrolltxt,interv2)}
+else if(num>0 && t<62){timer3=setTimeout(scrolltxt,interv2)}
+else{scton=0}};
+fadeon();
+}
+//初始化
+window.onload=s;
+</script>
+</body>
+</html>
+

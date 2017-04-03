@@ -1,0 +1,100 @@
+@charset "utf-8";
+.pubuliu{
+	width:960px;
+	margin:30px 0;
+	overflow:hidden;
+	float:left;
+}
+.box1, .box2, .box3{
+	width:300px;
+	height:350px;
+	float:left;
+}
+.box1{
+	background:url(../images/view1.gif) no-repeat;
+}
+.box2{
+	background:url(../images/view2.gif) no-repeat;
+}
+.box3{
+	background:url(../images/view3.gif) no-repeat;
+}
+.box1:hover{
+	background:url(../images/view1_act.gif) no-repeat;
+}
+.box2:hover{
+	background:url(../images/view2_act.gif) no-repeat;
+}
+.box3:hover{
+	background:url(../images/view3_act.gif) no-repeat;
+}
+.box4, .box5{
+	width:465px;
+	height:350px;
+	float:left;
+}
+.box4{
+	background:url(../images/activity1.gif) no-repeat;
+}
+.box5{
+	background:url(../images/activity2.gif) no-repeat;
+}
+.box4:hover{
+	background:url(../images/activity1_act.gif) no-repeat;
+}
+.box5:hover{
+	background:url(../images/activity2_act.gif) no-repeat;
+}
+.box_b{
+	overflow:hidden;
+	margin-left:30px;
+	margin-bottom:30px;
+}
+
+
+.box_deli1, .box_deli2, .box_deli3, .box_deli4, .box_deli5, .box_deli6, .shadeDiv{
+	width:300px;
+	height:350px;
+	float:left;
+}
+.box_deli1, .box_deli2, .box_deli3, .box_deli4, .box_deli5, .box_deli6{
+	position:relative;
+	overflow:hidden;
+}
+.box_deli1{
+	background:url(../images/meishi11.gif);
+}
+.box_deli2{
+	background:url(../images/meishi12.gif);
+}
+.box_deli3{
+	background:url(../images/meishi13.gif);
+}
+.box_deli4{
+	background:url(../images/meishi14.gif);
+}
+.box_deli5{
+	background:url(../images/meishi15.gif);
+}
+.box_deli6{
+	background:url(../images/meishi16.gif);
+}
+.box_deli1:hover .shadeDiv, .box_deli2:hover .shadeDiv, .box_deli3:hover .shadeDiv, .box_deli4:hover .shadeDiv, .box_deli5:hover .shadeDiv, .box_deli6:hover .shadeDiv{
+	background-color: rgba(0,0,0,0.5);
+	filter:alpha(opacity=50);/*proprietary  IE  code */
+	position:absolute;
+	top:0;
+	left:0;
+}
+h5{
+	display: none;  
+	font:2em/2.1em "YouYuan","微软雅黑",arial; 
+    margin:10px 20px;
+}
+.box_deli1:hover h5, .box_deli2:hover h5, .box_deli3:hover h5, .box_deli4:hover h5, .box_deli5:hover h5, .box_deli6:hover h5{
+	color:#f3f8f1;
+    position:relative;
+	display:block; 
+}
+
+	

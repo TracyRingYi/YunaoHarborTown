@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+#allmap {width:100%; height:500px;overflow: hidden;margin:0;}
+#l-map{height:100%;width:71%;float:left;border-right:2px solid #bcbcbc;}
+#r-result{height:100%;/*width:35%;*/float:left;font-size:16px;}
+.myclass{ height:50px; width:150px; font-size:12px; line-height:22px;}
+.bigdiv{width:100%; height:100%; margin:0 auto;}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=B3f7707c25da5b29a6ff69618788a296"></script>
+<title>百度地图api，并给标注动画</title>
+</head>
+<body>
+<div class="bigdiv">
+<div id="allmap">
+<p><span style="display:inline-block;width:200px;">&nbsp;</span>
+<input type="text" value="161" id="busId" /><!--<select id="busId">
+<option value="161">161</option>
+<option value="601">601</option>
+</select>-->路公交&nbsp;<input type="button" value="查询" onclick="busSearch();" /></p>
+<div style="clear:both">&nbsp;</div>
+<div  id="l-map"></div>
+<div id="r-result" ></div></div>
+</div>
+<script type="text/javascript">
+var map = new BMap.Map("l-map");
+var point = new BMap.Point(117.112146,23.413879);
+
+//map.enableScrollWheelZoom(true);
+map.enableScrollWheelZoom();    //启用滚轮放大缩小，默认禁用
+map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+map.centerAndZoom(point, 15);
+map.addControl(new BMap.NavigationControl());  //添加默认缩放平移控件
+var marker = new BMap.Marker(point);  // 创建标注
+map.addOverlay(marker);              // 将标注添加到地图中
+marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+//创建信息窗口
+var sContent ="<div class='myclass'>商家：名人酒店 <br>地址：南澳县云澳镇政府<br>电话：0754-86852002<br><img src='http://app.baidu.com/map/images/tiananmen.jpg'></div>";
+var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+map.centerAndZoom(point, 15);
+map.addOverlay(marker);
+marker.addEventListener("click", function(){          
+   this.openInfoWindow(infoWindow);s
+   //图片加载完毕重绘infowindow
+   document.getElementById('imgDemo').onload = function (){
+       infoWindow.redraw();
+   }
+});
+
+var busline = new BMap.BusLineSearch(map,{
+    renderOptions:{map:map,panel:"r-result"},
+        onGetBusListComplete: function(result){
+           if(result) {
+             var fstLine = result.getBusListItem(0);//获取第一个公交列表显示到map上
+             busline.getBusLine(fstLine);
+           }
+        }
+});
+function busSearch(){
+    var busName = document.getElementById("busId").value;
+    busline.getBusList(busName);
+}
+
+//点击生成经纬度
+/*map.addEventListener("click",function(e){
+    alert(e.point.lng + "," + e.point.lat);
+});*/
+
+</script>
+</body>
+</html>
