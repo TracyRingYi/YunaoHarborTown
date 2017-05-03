@@ -1,0 +1,42 @@
+@charset "utf-8";
+#content{
+	width:960px;
+	overflow:hidden;
+	margin:0 auto;
+}
+#content h2{
+	font:2em/3.375em "YouYuan","微软雅黑",arial; 
+	color:#424b50;
+	width:960px;
+	border-bottom:solid #424b50;
+	display:block;
+}
+#content h3{
+	font:1.5em/3em "YouYuan","微软雅黑",arial; 
+	color:#424b50;
+}
+#content p, #content ul li{
+	text-indent:2em;
+	font:1.375em/2.375em "YouYuan","微软雅黑",arial; 
+	color:#424b50;
+}
+#content ul{
+	float:left;
+	display:block;
+}
+#content .contact{
+	width:460px;
+	margin:50px auto;
+	overflow:hidden;
+}
+#content .contact p{
+	font:1.5em/3.375em "YouYuan","微软雅黑",arial; 
+}
+#content .contact p span{
+	font-weight:400;
+}
+#content .copyr{
+	width:960px;
+	margin:30px auto;
+	overflow:hidden;
+}

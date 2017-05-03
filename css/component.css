@@ -1,0 +1,184 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */ dl, dt, dd, ul, ol, li, /* list elements 列表元素 */ pre, /* text formatting elements 文本格式元素 */ form, fieldset, legend,/* form elements 表单元素 */ th, td, /* table elements 表格元素 */ img/* img elements 图片元素 */ {
+	border: medium none;
+	margin: 0;
+	padding: 0;
+}
+/** 设置默认字体 **/
+body, button, input, select, textarea {
+/*	font: 12px/1.5 '宋体', tahoma, Srial, helvetica, sans-serif;*/
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight:100;
+}
+em {
+	font-style: normal;
+}
+/** 重置列表元素 **/
+ul, ol {
+	list-style: none;
+}
+/** 重置超链接元素 **/
+a {
+	text-decoration: none;
+	color:#666;
+	outline: none;
+}
+a:hover {
+	color: #666;
+}
+/** 重置图片元素 **/
+img {
+	border: 0px;
+}
+/** 重置表格元素 **/
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.sheel {
+	width: 100%;
+	overflow: hidden;
+}
+.clear{
+	clear:both;
+}
+/***************重置结束*************/
+/* Set all parents to full height */
+
+
+body, html { 
+  padding: 0;
+  margin: 0;
+  }
+html, body, 
+.container,
+.cbp-fbscroller,
+.cbp-fbscroller section{ 
+	height: 100%; 
+}
+
+body{
+	position:relative;
+	background-color:white;
+	font-family:"YouYuan","微软雅黑",arial;
+}
+.cbp-fbscroller{
+	position:relative;
+}
+/* The nav is fixed on the right side  and we center it by translating it 50% 
+(we don't know it's height so we can't use the negative margin trick) */
+.cbp-fbscroller > nav {
+	position: fixed;
+	z-index: 9999;
+	right: 20px;
+	top: 50%;
+	width: 17px;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.cbp-fbscroller > nav a {
+	display: block;
+	position: relative;
+	color: transparent;
+	width: 17px;
+	height: 32px;
+	outline: none;
+	margin: 15px 0;
+	background-color:#f3f8f1;
+}
+
+.no-touch .cbp-fbscroller > nav a:hover {
+	background-color:#bddfe7;
+
+}
+.cbp-fbscroller > nav a.cbp-fbcurrent {
+	background-color:#bddfe7;
+}
+
+/* background-attachment does the trick */
+.cbp-fbscroller section {
+	position: relative;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+
+.no-touch .cbp-fbscroller section {
+	background-attachment: fixed;
+}
+
+#fbsection1,#fbsection2,#fbsection3{
+/*width:100%;*/
+}
+#fbsection1 {
+	background-image: url(../images/banner1bg.gif);
+	z-index:0;
+}
+
+#fbsection2 {
+	background-image: url(../images/banner2bg.gif);
+	z-index:2;
+}
+
+#fbsection3 {
+	background-image: url(../images/banner3bg.gif);
+	z-index:4;
+}
+
+.story{
+	position:absolute;
+	left:160px;
+	bottom:90px;
+}
+.story_left, .shadeDiv{
+	width:400px;
+	height:210px;
+}
+.story_left{
+	float:left;
+	z-index:11;
+}
+.story_left p, .story_left h4{
+	z-index:20;
+	color:#f3f8f1;
+	margin:15px 20px;
+}
+.story_left p{
+	font:1em/2em "YouYuan","微软雅黑",arial; 
+	border-bottom:3px soild #f3f8f1;
+	position:relative;
+}
+.story_left h4{
+	font:1.5em/2em "YouYuan","微软雅黑",arial; 
+    position:relative;
+}
+.shadeDiv{
+	background-color: rgba(0,0,0,0.5);
+	filter:alpha(opacity=50);
+	z-index:10;
+	position:absolute;
+}
+.shadeDiv:hover{
+	background-color: rgba(189,223,231,0.5);
+}
+.shadeDiv:hover p, .shadeDiv:hover h4{
+	color:#333;
+	position:relative;
+}
+.banner1_w, .banner2_w{
+	position:absolute;
+	right:160px;
+	top:115px;
+    overflow:hidden;
+}
+.banner3_w{
+	position:absolute;
+	top:115px;
+	left:160px;
+	overflow:hidden;
+}

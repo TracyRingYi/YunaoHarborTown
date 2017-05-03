@@ -1,0 +1,73 @@
+#footer{
+	color:#f3f8f1;
+	display:block;
+	height:auto;
+/*	padding-bottom:50px;*/
+	margin:0 auto;
+	width:100%;
+}
+#footer a:hover{
+	text-decoration:underline;
+}
+.foot-content{
+	position:absolute;
+	top:455px;
+	width:100%;
+	background-color:#424b50;
+	font:1.1em/2.375em "YouYuan","微软雅黑",arial;
+	overflow:hidden;
+}
+.about_us {
+	text-decoration:none;
+	text-align:center;
+	padding-top:10px;
+	color:#f3f8f1;
+}
+.about_us a{
+	color:#f3f8f1;
+}
+.about_us a:hover{
+	color:#bddfe7
+}
+.footer_img{
+	border:0px;
+	margin:30px 0;
+	height:370px;
+	background:url(../images/content.png) no-repeat center;
+}
+.footer_img h2{
+	color:#424b50;
+	font:2em/2.375em "YouYuan","微软雅黑",arial;
+	text-align:center;
+	padding-top:40px;
+}
+.con{
+	position:absolute;
+	left:50%;
+	margin:0 -480px;
+	overflow:hidden;
+}
+.con_left, .con_right{
+	width:465px;
+    overflow:hidden;
+	float:left
+}
+.con_right{
+	margin-left:30px;
+}
+.footer_img h3{
+	display:block;
+	font:1.375em/3.375em "YouYuan","微软雅黑",arial;
+	float:left;
+	color:#424b50;
+	width:465px;
+	border-bottom:#424b50 2px solid;
+	text-indent:2em;
+}
+.footer_img h3 a{
+	color:#39F;
+}
+
+
+
+

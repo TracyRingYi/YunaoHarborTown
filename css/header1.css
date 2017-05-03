@@ -1,0 +1,73 @@
+@charset "utf-8";
+header{
+	width:100%;
+	height:60px;
+	background:#424b50;
+	position:fixed;
+    top:0;
+    left:0;
+    z-index:100;
+}
+.content_wrapper{
+	width:960px;
+	margin:0 auto;
+}
+.logo{
+	float:left;
+	background:url(../images/logo.png) no-repeat;
+	background-size:32%;
+	width:270px;
+}
+.logo h1{
+	padding-left:100px;
+	font:1.5em/2.375em "YouYuan","微软雅黑",arial; 
+	color:#f3f8f1;
+}
+nav { 
+    font:1.1em/3.375em "YouYuan","微软雅黑",arial; 
+	float:right;
+} 
+nav ul li { 
+    float:left; 
+    position:relative; 
+} 
+nav ul li a, nav ul li ul li a{
+	display:block; 
+    text-align:center; 
+    text-decoration:none; 
+	line-height:60px;
+	color:#f3f8f1;
+}
+nav ul li a{
+    width:100px;  
+} 
+nav ul li ul li a{ 
+    width:150px;
+} 
+nav ul li ul { 
+    display: none; 
+}  
+nav ul li:hover a { 
+	color:#424b50;
+    background:#bddfe7;
+} 
+nav ul li:hover ul { 
+    display:block; 
+    position:absolute; 
+    top:60px; 
+    left:0; 
+} 
+nav ul li:hover ul li a { 
+    display:block; 
+    color:#f3f8f1;
+    background:#424b50;
+} 
+nav ul li:hover ul li a:hover { 
+    color:#424b50;
+    background:#bddfe7; 
+} 
+
+.active{
+	color:#424b50;
+    background:#bddfe7;
+}
