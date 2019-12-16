@@ -1,167 +1,84 @@
-<!DOCTYPE html >
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <!-- saved from url=(0014)about:internet -->
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="css/reset.css" rel="stylesheet" type="text/css" />
-<link href="css/header.css" rel="stylesheet" type="text/css" />
-<link href="css/banner.css" rel="stylesheet" type="text/css" media="all"/>
-<link href="css/article.css" rel="stylesheet" type="text/css" />
-<title>活动|云澳镇</title>
-</head>
-<body>
-<header>
-<div class="content_wrapper">
-<a href="default.html"><div class="logo">
-<h1>云澳港湾小镇</h1>
-</div></a>
-<nav>
-<ul>
-  <li><a href="view.html">景观</a>
-    <ul>
-      <li><a href="yandunbay.html">烟墩湾</a></li>
-      <li><a href="songwell.html">宋井</a></li>
-      <li><a href="fishingport.html">云澳国家中心渔港</a></li>
-    </ul>
-  </li>
-  <li class="active"><a href="activity.html">活动</a>
-    <ul>
-      <li><a href="fishing.html">海钓</a></li>
-      <li><a href="motorboat.html">摩托艇</a></li>
-    </ul>
-  </li>
-  <li><a href="facts.html">概况</a></li>
-  <li><a href="transportation.html">交通</a>
-    <ul>
-      <li><a href="transportation.html#go">前往云澳镇</a></li>
-      <li><a href="transportation.html#bus">公交</a></li>
-      <li><a href="transportation.html#drive">自驾车</a></li>
-      <li><a href="transportation.html#bike">自行车</a></li>
-    </ul>
-  </li>
-  <li><a href="delicious.html">美食</a></li>
-</ul>
-</nav>
-</div>
-</header>
-<div id="banner">
-<div class="loading">Loading
-</div>
-    <ul>
-      <li><img src="images/fishing1.gif"/></li>
-      <li><img src="images/fishing2.gif"/></li>
-    </ul>
-</div>
-<div id="content">
-<h2>海钓基地</h2>
-<p>南澳四面环海，环岛钓点密集，鱼类资源丰富，向来是钓鱼休闲的好地方。以下为大家提供几个南澳钓鱼爱好者最青睐的钓点供大家参考：展南亭（距后宅约4公里）、下势山（距后宅约7公里）、云澳港（包括码头护堤，鱼筏）、乌屿（需要乘竹筏出海，距宋井景区较近）、东澳养殖区。
-</p>
-<p>南澳岛地处粤东海面，位于高雄——厦门——香港三大港口的中心点，濒临西太平洋国际主航线,是全国最大的海岛县，她是由37个大小岛屿所组成，连绵的沿海线更叫人心旷神怡。岛上风景优美，民风淳朴，名胜古迹众多，渔业资源丰富。长达77公里海岸线与附近有众多的附属岛屿形成天然钓场，丰富的渔业资源吸引许多港、澳、台和内地同胞前来解毒过瘾。 。
-</p>
-<p>被浩瀚南海簇拥着的南澳岛海岸线漫长，环岛又拥有众多天然港湾、礁岩，是岛内外海钓者神往之处。目前，海岛海区生态环境良好，近海区域水质分别达到相应功能区标准，成为粤东地区海水水质最佳区域。从1999年起，南澳岛海区域已连续多年没发生大面积赤潮，栖息海底的各种鱼儿成了海钓者大展身手的舞台，有的甚至靠此养家糊口。
-</p>
-</div>
-<div id="footer">
-<p><a href="http://www.hstc.edu.cn/2013/">韩山师范学院</a>|<a href="contact.html">联系我们</a>|<a href="copyright.html">版权声明</a></p>
-<p>CopyRight©2015&nbsp;CYI&ZWS&nbsp;All&nbsp;Rights&nbsp;Reserved</p>
-</div>
-<script type="text/javascript">
-//主函数
-var s=function(){
-var interv=3000; //切换间隔时间
-var interv2=10; //切换速du
-var opac1=80; //文字背景的透明度
-var source="banner" //焦点轮换图片容器的id名称
-//获取对象
-function getTag(tag,obj){
-	if(obj==null)
-	{return document.getElementsByTagName(tag)}
-	else
-	{return obj.getElementsByTagName(tag)}}
-function getid(id)
-    {return document.getElementById(id)};
-var opac=0,j=0,t=63,num,scton=0,timer,timer2,timer3;
-var id=getid(source);
-id.removeChild(getTag("div",id)[0]);
-var li=getTag("li",id);
-var div=document.createElement("div");
-var title=document.createElement("div");
-var span=document.createElement("span");
-var button=document.createElement("div");
-    button.className="button";
-for(var i=0;i<li.length;i++)
-{var a=document.createElement("a");
-a.innerHTML=i+1;
-a.onclick=function()
-{clearTimeout(timer);
-clearTimeout(timer2);
-clearTimeout(timer3);
-j=parseInt(this.innerHTML)-1;
-scton=0;
-t=63;
-opac=0;
-fadeon();
-};
-a.className="b1";
-a.onmouseover=function()
-{this.className="b2"};
-a.onmouseout=function()
-{this.className="b1";
-sc(j)};
-button.appendChild(a);}
-//控制图层透明度
-function alpha(obj,n)
-{if(document.all)
-{obj.style.filter="alpha(opacity="+n+")";}
-else{obj.style.opacity=(n/100);}}
-//控制焦点按钮
-function sc(n){
-	for(var i=0;i<li.length;i++)
-	{button.childNodes[i].className="b1"};
-	button.childNodes[n].className="b2";}
-title.className="num_list";
-title.appendChild(span);
-alpha(title,opac1);
-id.className="d1";
-div.className="d2";
-id.appendChild(div);
-id.appendChild(title);
-id.appendChild(button);
-//渐显
-var fadeon=function()
-{opac+=5;
-div.innerHTML=li[j].innerHTML;
-span.innerHTML=getTag("img",li[j])[0].alt;
-alpha(div,opac);
-if(scton==0)
-{sc(j);
-num=-2;
-scrolltxt();
-scton=1};
-if(opac<100)
-{timer=setTimeout(fadeon,interv2)}
-else
-{timer2=setTimeout(fadeout,interv);};}
-//渐隐
-var fadeout=function()
-{opac-=5;div.innerHTML=li[j].innerHTML;
-alpha(div,opac);
-if(scton==0)
-{num=2;scrolltxt();scton=1};
-if(opac>0){timer=setTimeout(fadeout,interv2)}
-else
-{if(j<li.length-1){j++}else{j=0};fadeon()};}
-//滚动文字
-var scrolltxt=function(){t+=num;span.style.marginTop=t+"px";
-if(num<0 && t>3)
-{timer3=setTimeout(scrolltxt,interv2)}
-else if(num>0 && t<62){timer3=setTimeout(scrolltxt,interv2)}
-else{scton=0}};
-fadeon();
-}
-//初始化
-window.onload=s;
-</script>
-</body>
-</html>
 
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="css/header.css" rel="stylesheet" type="text/css" />
+  <link href="css/banner.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/article.css" rel="stylesheet" type="text/css" />
+  <title>活动|云澳镇</title>
+</head>
+
+<body>
+  <header>
+    <div class="content_wrapper">
+      <a href="index.html">
+        <div class="logo">
+          <h1>云澳港湾小镇</h1>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="view.html">景观</a>
+            <ul>
+              <li><a href="yandunbay.html">烟墩湾</a></li>
+              <li><a href="songwell.html">宋井</a></li>
+              <li><a href="fishingport.html">云澳国家中心渔港</a></li>
+            </ul>
+          </li>
+          <li class="active"><a href="activity.html">活动</a>
+            <ul>
+              <li><a href="fishing.html">海钓</a></li>
+              <li><a href="motorboat.html">摩托艇</a></li>
+            </ul>
+          </li>
+          <li><a href="facts.html">概况</a></li>
+          <li><a href="transportation.html">交通</a>
+            <ul>
+              <li><a href="transportation.html#go">前往云澳镇</a></li>
+              <li><a href="transportation.html#bus">公交</a></li>
+              <li><a href="transportation.html#drive">自驾车</a></li>
+              <li><a href="transportation.html#bike">自行车</a></li>
+            </ul>
+          </li>
+          <li><a href="delicious.html">美食</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div id="banner">
+    <div class="loading">Loading
+    </div>
+    <ul>
+      <li><img src="images/fishing1.gif" /></li>
+      <li><img src="images/fishing2.gif" /></li>
+    </ul>
+  </div>
+  <div id="content">
+    <h2>海钓基地</h2>
+    <p>
+      南澳四面环海，环岛钓点密集，鱼类资源丰富，向来是钓鱼休闲的好地方。以下为大家提供几个南澳钓鱼爱好者最青睐的钓点供大家参考：展南亭（距后宅约4公里）、下势山（距后宅约7公里）、云澳港（包括码头护堤，鱼筏）、乌屿（需要乘竹筏出海，距宋井景区较近）、东澳养殖区。
+    </p>
+    <p>
+      南澳岛地处粤东海面，位于高雄——厦门——香港三大港口的中心点，濒临西太平洋国际主航线,是全国最大的海岛县，她是由37个大小岛屿所组成，连绵的沿海线更叫人心旷神怡。岛上风景优美，民风淳朴，名胜古迹众多，渔业资源丰富。长达77公里海岸线与附近有众多的附属岛屿形成天然钓场，丰富的渔业资源吸引许多港、澳、台和内地同胞前来解毒过瘾。
+      。
+    </p>
+    <p>
+      被浩瀚南海簇拥着的南澳岛海岸线漫长，环岛又拥有众多天然港湾、礁岩，是岛内外海钓者神往之处。目前，海岛海区生态环境良好，近海区域水质分别达到相应功能区标准，成为粤东地区海水水质最佳区域。从1999年起，南澳岛海区域已连续多年没发生大面积赤潮，栖息海底的各种鱼儿成了海钓者大展身手的舞台，有的甚至靠此养家糊口。
+    </p>
+  </div>
+  <div id="footer">
+    <p><a href="http://www.hstc.edu.cn/2013/">韩山师范学院</a>|<a href="contact.html">联系我们</a>|<a
+        href="copyright.html">版权声明</a></p>
+    <p>CopyRight©2015&nbsp;CYI&ZWS&nbsp;All&nbsp;Rights&nbsp;Reserved</p>
+  </div>
+  <script type="text/javascript" src='./js/banner.js'></script>
+  <script type="text/javascript">
+    //初始化
+    window.onload = s;
+  </script>
+</body>
+
+</html>

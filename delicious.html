@@ -1,196 +1,115 @@
-<!DOCTYPE html >
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <!-- saved from url=(0014)about:internet -->
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="css/reset.css" rel="stylesheet" type="text/css" />
-<link href="css/header.css" rel="stylesheet" type="text/css" />
-<link href="css/banner.css" rel="stylesheet" type="text/css" media="all"/>
-<link href="css/article.css" rel="stylesheet" type="text/css" />
-<link href="css/pubuliu.css" rel="stylesheet" type="text/css" />
-<title>美食|云澳镇</title>
-</head>
-<body>
-<header>
-<div class="content_wrapper">
-<a href="default.html"><div class="logo">
-<h1>云澳港湾小镇</h1>
-</div></a>
-<nav>
-<ul>
-  <li><a href="view.html">景观</a>
-    <ul>
-      <li><a href="yandunbay.html">烟墩湾</a></li>
-      <li><a href="songwell.html">宋井</a></li>
-      <li><a href="fishingport.html">云澳国家中心渔港</a></li>
-    </ul>
-  </li>
-  <li><a href="activity.html">活动</a>
-    <ul>
-      <li><a href="fishing.html">海钓</a></li>
-      <li><a href="motorboat.html">摩托艇</a></li>
-    </ul>
-  </li>
-  <li><a href="facts.html">概况</a></li>
-  <li><a href="transportation.html">交通</a>
-    <ul>
-      <li><a href="transportation.html#go">前往云澳镇</a></li>
-      <li><a href="transportation.html#bus">公交</a></li>
-      <li><a href="transportation.html#drive">自驾车</a></li>
-      <li><a href="transportation.html#bike">自行车</a></li>
-    </ul>
-  </li>
-  <li class="active"><a href="delicious.html">美食</a></li>
-</ul>
-</nav>
-</div>
-</header>
-<div id="banner">
-<div class="loading">Loading
-</div>
-    <ul>
-      <li><img src="images/meishi1.gif"/></li>
-      <li><img src="images/meishi2.gif"/></li>
-    </ul>
-</div>
-<div id="content">
-<h2>美食</h2>
-<p>汕头所在的潮汕地区盛行潮州菜，它是广东三大菜系之一（其余两种为粤菜和客家菜），南澳美食同样也属于潮州菜。潮州菜以烹制海鲜见长，从选料到酱碟佐料，都要求新鲜美味、清而不淡、鲜而不腥、郁而不腻。</p>
-<p>南澳岛水产丰富，环境洁净，海鲜都十分鲜美可口：鱼虾因鱼鳔丰富富含营养，鱿鱼皮甜肉也甜，鲍鱼虽个头不大，但食起来特别鲜甜。</p>
-<p>岛上的饭店多为海鲜大排档，一些吃海鲜的禁忌以及吃不惯海鲜的游客需注意。</p>
-<div class="pubuliu">
-<div class="box_deli1"><div class="shadeDiv">
-<h5>芋头酥</h5>
-<h5>酥松的口感，拼接上内馅的细腻爽滑，清香绵糯，美味无与伦比。</h5>
-</div>
-</div>
-<div class="box_deli2 box_b"><div class="shadeDiv">
-<h5>番薯酥</h5>
-<h5>即食小吃酥脆原味,一盘不够再来一盘</h5>
-</div>
-</div>
-<div class="box_deli3 box_b"><div class="shadeDiv">
-<h5>南澳牡蛎</h5>
-<h5>云澳镇属亚热带海洋季风气候，海域面积广阔，海洋生物丰富，所产牡蛎产量高、肉质肥美。</h5>
-</div>
-</div>
-<div class="box_deli4"><div class="shadeDiv">
-<h5>海石花</h5>
-<h5>颜色鲜艳、爽口嫩滑的夏日美食，不仅清热解暑.还有美白养颜养胎润肠的功效。</h5>
-</div>
-</div>
-<div class="box_deli5 box_b"><div class="shadeDiv">
-<h5>海鲜肠粉</h5>
-<h5>云澳作为海鲜产地，当地的肠粉主料当然是海鲜，生蚝，鱿鱼，配上甜辣酱，绝对的美味。</h5>
-</div>
-</div>
-<div class="box_deli6 box_b"><div class="shadeDiv">
-<h5>薄饼</h5>
-</div>
-</div>
-</div>
-</div>
-<div id="footer">
-<p><a href="http://www.hstc.edu.cn/2013/">韩山师范学院</a>|<a href="contact.html">联系我们</a>|<a href="copyright.html">版权声明</a></p>
-<p>CopyRight©2015&nbsp;CYI&ZWS&nbsp;All&nbsp;Rights&nbsp;Reserved</p>
-</div>
-<script type="text/javascript">
-//主函数
-var s=function(){
-var interv=3000; //切换间隔时间
-var interv2=10; //切换速du
-var opac1=80; //文字背景的透明度
-var source="banner" //焦点轮换图片容器的id名称
-//获取对象
-function getTag(tag,obj){
-	if(obj==null)
-	{return document.getElementsByTagName(tag)}
-	else
-	{return obj.getElementsByTagName(tag)}}
-function getid(id)
-    {return document.getElementById(id)};
-var opac=0,j=0,t=63,num,scton=0,timer,timer2,timer3;
-var id=getid(source);
-id.removeChild(getTag("div",id)[0]);
-var li=getTag("li",id);
-var div=document.createElement("div");
-var title=document.createElement("div");
-var span=document.createElement("span");
-var button=document.createElement("div");
-    button.className="button";
-for(var i=0;i<li.length;i++)
-{var a=document.createElement("a");
-a.innerHTML=i+1;
-a.onclick=function()
-{clearTimeout(timer);
-clearTimeout(timer2);
-clearTimeout(timer3);
-j=parseInt(this.innerHTML)-1;
-scton=0;
-t=63;
-opac=0;
-fadeon();
-};
-a.className="b1";
-a.onmouseover=function()
-{this.className="b2"};
-a.onmouseout=function()
-{this.className="b1";
-sc(j)};
-button.appendChild(a);}
-//控制图层透明度
-function alpha(obj,n)
-{if(document.all)
-{obj.style.filter="alpha(opacity="+n+")";}
-else{obj.style.opacity=(n/100);}}
-//控制焦点按钮
-function sc(n){
-	for(var i=0;i<li.length;i++)
-	{button.childNodes[i].className="b1"};
-	button.childNodes[n].className="b2";}
-title.className="num_list";
-title.appendChild(span);
-alpha(title,opac1);
-id.className="d1";
-div.className="d2";
-id.appendChild(div);
-id.appendChild(title);
-id.appendChild(button);
-//渐显
-var fadeon=function()
-{opac+=5;
-div.innerHTML=li[j].innerHTML;
-span.innerHTML=getTag("img",li[j])[0].alt;
-alpha(div,opac);
-if(scton==0)
-{sc(j);
-num=-2;
-scrolltxt();
-scton=1};
-if(opac<100)
-{timer=setTimeout(fadeon,interv2)}
-else
-{timer2=setTimeout(fadeout,interv);};}
-//渐隐
-var fadeout=function()
-{opac-=5;div.innerHTML=li[j].innerHTML;
-alpha(div,opac);
-if(scton==0)
-{num=2;scrolltxt();scton=1};
-if(opac>0){timer=setTimeout(fadeout,interv2)}
-else
-{if(j<li.length-1){j++}else{j=0};fadeon()};}
-//滚动文字
-var scrolltxt=function(){t+=num;span.style.marginTop=t+"px";
-if(num<0 && t>3)
-{timer3=setTimeout(scrolltxt,interv2)}
-else if(num>0 && t<62){timer3=setTimeout(scrolltxt,interv2)}
-else{scton=0}};
-fadeon();
-}
-//初始化
-window.onload=s;
-</script>
-</body>
-</html>
 
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="css/header.css" rel="stylesheet" type="text/css" />
+  <link href="css/banner.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/article.css" rel="stylesheet" type="text/css" />
+  <link href="css/pubuliu.css" rel="stylesheet" type="text/css" />
+  <title>美食|云澳镇</title>
+</head>
+
+<body>
+  <header>
+    <div class="content_wrapper">
+      <a href="index.html">
+        <div class="logo">
+          <h1>云澳港湾小镇</h1>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="view.html">景观</a>
+            <ul>
+              <li><a href="yandunbay.html">烟墩湾</a></li>
+              <li><a href="songwell.html">宋井</a></li>
+              <li><a href="fishingport.html">云澳国家中心渔港</a></li>
+            </ul>
+          </li>
+          <li><a href="activity.html">活动</a>
+            <ul>
+              <li><a href="fishing.html">海钓</a></li>
+              <li><a href="motorboat.html">摩托艇</a></li>
+            </ul>
+          </li>
+          <li><a href="facts.html">概况</a></li>
+          <li><a href="transportation.html">交通</a>
+            <ul>
+              <li><a href="transportation.html#go">前往云澳镇</a></li>
+              <li><a href="transportation.html#bus">公交</a></li>
+              <li><a href="transportation.html#drive">自驾车</a></li>
+              <li><a href="transportation.html#bike">自行车</a></li>
+            </ul>
+          </li>
+          <li class="active"><a href="delicious.html">美食</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div id="banner">
+    <div class="loading">Loading
+    </div>
+    <ul>
+      <li><img src="images/meishi1.gif" /></li>
+      <li><img src="images/meishi2.gif" /></li>
+    </ul>
+  </div>
+  <div id="content">
+    <h2>美食</h2>
+    <p>汕头所在的潮汕地区盛行潮州菜，它是广东三大菜系之一（其余两种为粤菜和客家菜），南澳美食同样也属于潮州菜。潮州菜以烹制海鲜见长，从选料到酱碟佐料，都要求新鲜美味、清而不淡、鲜而不腥、郁而不腻。</p>
+    <p>南澳岛水产丰富，环境洁净，海鲜都十分鲜美可口：鱼虾因鱼鳔丰富富含营养，鱿鱼皮甜肉也甜，鲍鱼虽个头不大，但食起来特别鲜甜。</p>
+    <p>岛上的饭店多为海鲜大排档，一些吃海鲜的禁忌以及吃不惯海鲜的游客需注意。</p>
+    <div class="pubuliu">
+      <div class="box_deli1">
+        <div class="shadeDiv">
+          <h5>芋头酥</h5>
+          <h5>酥松的口感，拼接上内馅的细腻爽滑，清香绵糯，美味无与伦比。</h5>
+        </div>
+      </div>
+      <div class="box_deli2 box_b">
+        <div class="shadeDiv">
+          <h5>番薯酥</h5>
+          <h5>即食小吃酥脆原味,一盘不够再来一盘</h5>
+        </div>
+      </div>
+      <div class="box_deli3 box_b">
+        <div class="shadeDiv">
+          <h5>南澳牡蛎</h5>
+          <h5>云澳镇属亚热带海洋季风气候，海域面积广阔，海洋生物丰富，所产牡蛎产量高、肉质肥美。</h5>
+        </div>
+      </div>
+      <div class="box_deli4">
+        <div class="shadeDiv">
+          <h5>海石花</h5>
+          <h5>颜色鲜艳、爽口嫩滑的夏日美食，不仅清热解暑.还有美白养颜养胎润肠的功效。</h5>
+        </div>
+      </div>
+      <div class="box_deli5 box_b">
+        <div class="shadeDiv">
+          <h5>海鲜肠粉</h5>
+          <h5>云澳作为海鲜产地，当地的肠粉主料当然是海鲜，生蚝，鱿鱼，配上甜辣酱，绝对的美味。</h5>
+        </div>
+      </div>
+      <div class="box_deli6 box_b">
+        <div class="shadeDiv">
+          <h5>薄饼</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <p><a href="http://www.hstc.edu.cn/2013/">韩山师范学院</a>|<a href="contact.html">联系我们</a>|<a
+        href="copyright.html">版权声明</a></p>
+    <p>CopyRight©2015&nbsp;CYI&ZWS&nbsp;All&nbsp;Rights&nbsp;Reserved</p>
+  </div>
+  <script type="text/javascript" src="js/banner.js"></script>
+  <script>
+    //初始化
+    window.onload = s;
+  </script>
+</body>
+
+</html>
